@@ -31,7 +31,6 @@ img {
 
 a {
     text-decoration: none;
-    line-height: 0;
 }
 
 html,
@@ -51,6 +50,10 @@ button {
     cursor: pointer;
     box-shadow: 3px 1px 6px 0 rgba(0, 0, 0, 0.44), 10px 2px 11px 0 rgba(0, 0, 0, 0.38), 23px 6px 14px 0 rgba(0, 0, 0, 0.23), 41px 10px 17px 0 rgba(0, 0, 0, 0.07), 65px 15px 19px 0 rgba(0, 0, 0, 0.01);
     background: #5dd62c;
+    padding: 18px 56px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    max-width: max-content;
 
     & span {
         font-family: 'Montserrat';
@@ -111,17 +114,19 @@ body {
 }
 
 .footer__title {
-    font-family: 'Kudry';
+    font-family: 'Kudry Weird Headline';
     font-weight: 300;
     font-size: 64px;
     color: #fff;
+    margin-bottom: 9px;
 }
 
 .footer__text {
-    font-family: 'Kudry';
+    font-family: 'Kudry Weird Headline';
     font-weight: 300;
     font-size: 24px;
     color: #fff;
+    margin-top: 24px;
 
     & span {
         color: #4000ff;
@@ -134,18 +139,114 @@ body {
     font-size: 758px;
     color: #000;
     opacity: .15;
+    position: absolute;
 }
 
 .header {
     flex: 0 0 auto;
+    position: fixed;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+
+    &__row {
+        padding: 23px 0;
+        position: relative;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        &-right {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        &-left {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__logo {
+        margin: 0 109px;
+    }
+
+    &__menu-faq {
+        position: absolute;
+        right: 50px;
+        top: 32px;
+
+        & a {
+            opacity: 0.67;
+        }
+    }
 }
 
 .footer {
     flex: 0 0 auto;
+
+    &__row {
+        padding: 116px 0;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
 }
 
 .main {
     flex: 1 0 auto;  
     display: flex;
     flex-direction: column;
+}
+
+.banner {
+    margin-top: 56px;
+
+    &__row {
+        background-image: url('../image/banner-fon.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 125px;
+        box-sizing: border-box;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__img {
+        z-index: 1;
+    }
+
+    &__title {
+        margin-top: 32px;
+        z-index: 1;
+    }
+
+    &__subtitle {
+        max-width: 1015px;
+        margin-bottom: 12px;
+        z-index: 1;
+
+        & span {
+            text-transform: lowercase;
+        }
+    }
+
+    &__text {
+        margin-bottom: 69px;
+        max-width: 513px;
+        z-index: 1;
+    }
+
+    &__46 {
+        right: 100px;
+        bottom: -208px;
+    }
 }
