@@ -275,7 +275,9 @@ body {
 }
 
 .all {
-    margin-top: 85px;
+    padding-top: 85px;
+    position: relative;
+    box-sizing: border-box;
 
     &__row {
         background-image: url('../image/main-fon.png');
@@ -285,6 +287,21 @@ body {
         box-sizing: border-box;
         flex-direction: column;
         position: relative;
+        z-index: 10;
+    }
+
+    &__tree {
+        &-1 {
+            position: absolute;
+            top: 85px;
+            left: 0;
+        }
+
+        &-2 {
+            position: absolute;
+            right: -476px;
+            top: 0;
+        }
     }
 }
 
