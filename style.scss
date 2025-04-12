@@ -308,7 +308,8 @@ body {
 .portfolio {
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+
     &__title {
         margin: 0 auto 204px;
         text-shadow:
@@ -320,7 +321,7 @@ body {
         
         &-fon {
            position: absolute;
-            top: 40px;
+            top: -4px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -328,6 +329,7 @@ body {
 
     &__slider {
         position: relative;
+        margin-bottom: 45px;
 
         &-title {
             text-shadow:
@@ -353,32 +355,31 @@ body {
             33px 12px 35px rgba(0, 0, 0, 0.85),
             74px 28px 47px rgba(0, 0, 0, 0.5);
     }
-      
+
+    &__button {
+        margin: 0 auto;
+    }   
 }
 
 .swiper {
     width: 100%;
     height: 100%;
-  }
-
+}
 .swiper-slide {
     background: transparent;
     display: flex;
     flex-direction: column;
     max-width: 471px;
 }
-
 .swiper-wrapper {
     gap: 5px;
 }
-
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     width: max-content !important;
     display: flex;
@@ -389,17 +390,32 @@ body {
     left: auto !important;
     transform: translateY(-50%);
 }
-
 .swiper-pagination-bullet-active {
     background: #fff !important;
 }
-
 .swiper-pagination-bullet {
     width: 11px !important;
     height: 11px !important;
     opacity: 1 !important;
 }
-
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 10px 0 !important;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 100px;
+
+    &__title {
+        margin: 20px auto 32.5px;
+
+        &-fon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
